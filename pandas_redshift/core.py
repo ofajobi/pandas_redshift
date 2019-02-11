@@ -122,6 +122,8 @@ def pd_dtype_to_redshift_dtype(dtype):
         return 'TIMESTAMP'
     elif dtype == 'bool':
         return 'BOOLEAN'
+    elif dtype == 'object':
+        return 'TEXT'
     else:
         return 'VARCHAR(256)'
 
